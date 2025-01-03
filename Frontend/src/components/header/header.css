@@ -1,0 +1,79 @@
+.header{
+    background-color: #0865d6;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    flex-direction: column;
+    height: 100px;
+}
+.header-logo-feature{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+.header-logo-slogan{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    gap: 1rem;
+}
+.header-slogan{
+    color: white;
+    margin: 0;
+    padding: 10px;
+}
+.header-menu{
+    width: 50%;
+}
+.menu-feature{
+    padding: 0;
+    margin: 0;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+}
+.feature{
+    list-style-type: none;
+}
+.feature-link{
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+}
+.header-contact{
+    color: white;
+    padding: 10px;
+}
+.contact-click{
+    text-decoration: none;
+    color: white;
+}
+.feature_logout{
+    position: absolute;
+    bottom: -50px;
+    z-index: 2;
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+}
+.logout_button{
+    width: 150px;
+    padding: 5px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    font-weight: 600;
+}
+.logout_button:hover{
+    background-color: #f54646;
+    color: white;
+}
+.menu-feature:hover .feature_logout{
+    display: flex;
+    opacity: 1;
+}
