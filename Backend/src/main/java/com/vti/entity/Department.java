@@ -29,11 +29,6 @@ public class Department {
     @NonNull
     private int totalMember;
 
-    @Column(name = "`type`", nullable = false)
-    @Convert(converter = DepartmentTypeConvert.class)
-    @NonNull
-    private Type type;
-
     @Column(name = "created_date")
     @CreationTimestamp
     @Temporal(TemporalType.TIMESTAMP)
@@ -41,28 +36,4 @@ public class Department {
 
     @OneToMany(mappedBy = "department")
     private List<Account> accounts;
-
-    public enum Type {
-        DEV("Dev"), TEST("Test"), ScrumMaster("ScrumMaster"), PM("PM");
-
-        private String value;
-
-        private Type(String value) {
-            this.value = value;
-        }
-
-        public String getValue() {
-            return value;
-        }
-
-        public static Type toEnum(String sqlValue) {
-            for (Type type : Type.values()) {
-                if (type.getValue().equals(sqlValue)) {
-                    return type;
-                }
-            }
-            return null;
-        }
-
-    }
 }

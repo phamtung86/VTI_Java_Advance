@@ -2,7 +2,7 @@
     width: 100%;
     height: 100%;
     position: absolute;
-    background-color: rgba(0, 0, 0, 0.788);
+    background-color: rgba(48, 47, 47, 0.692);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -11,17 +11,18 @@
     left: 0;
 }
 .department-crud-form{
-    height: 400px;
-    width: 60%;
+    height: 500px;
     padding: 10px;
-    background-color: white;
+    background-color: rgb(255, 255, 255);
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     gap: 1rem;
     border-radius: 10px;
     position: relative;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    width: 60%;
 }
 .form-element{
     display: flex;
@@ -52,6 +53,8 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
+    position: absolute;
+    bottom: 10px;
 }
 .crud-button-reset, .crud-button-cancel, .crud-button-submit{
     border: none;

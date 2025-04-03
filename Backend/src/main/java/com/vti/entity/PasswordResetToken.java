@@ -26,5 +26,6 @@ public class PasswordResetToken {
 	private Account account;
 
 	private Timestamp expiryDate;
+
 	private Timestamp createdAt;
 }

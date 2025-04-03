@@ -6,21 +6,19 @@ import lombok.NoArgsConstructor;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.Formula;
 
-import java.io.Serial;
-import java.io.Serializable;
-import java.sql.Timestamp;
+import java.util.Date;
 
 @Entity
 @Table(name = "account")
 @Data
 @NoArgsConstructor
-public class Account implements Serializable {
-    @Serial
-    private static final long serialVersionUID = 1L;
+public class Account  {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     private Integer id;
+
     @Column(name = "Username")
     private String username;
 
@@ -43,10 +41,14 @@ public class Account implements Serializable {
     @Column(name = "email")
     private String email;
 
+    @Column(name = "status")
+    private Integer status;
+
     @Column(name = "create_date")
     @CreationTimestamp
-    @Temporal(TemporalType.TIMESTAMP)
-    private Timestamp createDate;
+    private Date createDate;
+
+    private String profileImage;
 
     @ManyToOne
     @JoinColumn(name = "department_id", referencedColumnName = "id")
