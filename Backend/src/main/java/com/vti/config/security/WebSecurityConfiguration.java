@@ -56,12 +56,12 @@ public class WebSecurityConfiguration {
     @Bean
     public CorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration configuration = new CorsConfiguration();
-        configuration.setAllowCredentials(true);  // Allow credentials (cookies)
-        configuration.setAllowedOrigins(List.of("http://localhost:3000"));  // Allow frontend origin
-        configuration.setAllowedHeaders(List.of("*"));  // Allow all headers
-        configuration.setAllowedMethods(List.of("GET", "POST", "PUT", "DELETE", "OPTIONS"));  // Allow all methods
-        configuration.addExposedHeader("Authorization");  // Expose Authorization header
-        configuration.addExposedHeader("Set-Cookie");  // Expose Set-Cookie header (required for cookies to be sent)
+        configuration.setAllowCredentials(true);
+        configuration.setAllowedOrigins(List.of("http://localhost:3000"));
+        configuration.setAllowedHeaders(List.of("*"));
+        configuration.setAllowedMethods(List.of("GET", "POST", "PUT", "DELETE", "OPTIONS"));
+        configuration.addExposedHeader("Authorization");
+        configuration.addExposedHeader("Set-Cookie");
         UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
         source.registerCorsConfiguration("/**", configuration);
         return source;
